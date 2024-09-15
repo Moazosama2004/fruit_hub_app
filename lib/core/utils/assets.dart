@@ -6,6 +6,22 @@ class Assets {
   /// assets/images/app_icon.png
   static const String assetsImagesAppIcon = "assets/images/app_icon.png";
 
+  /// Assets for assetsSvgsPageViewItemBackgroundImage1
+  /// assets/svgs/page_view_item_background_image1.svg
+  static const String assetsSvgsPageViewItemBackgroundImage1 = "assets/svgs/page_view_item_background_image1.svg";
+
+  /// Assets for assetsSvgsPageViewItemBackgroundImage2
+  /// assets/svgs/page_view_item_background_image2.svg
+  static const String assetsSvgsPageViewItemBackgroundImage2 = "assets/svgs/page_view_item_background_image2.svg";
+
+  /// Assets for assetsSvgsPageViewItemImage1
+  /// assets/svgs/page_view_item_image1.svg
+  static const String assetsSvgsPageViewItemImage1 = "assets/svgs/page_view_item_image1.svg";
+
+  /// Assets for assetsSvgsPageViewItemImage2
+  /// assets/svgs/page_view_item_image2.svg
+  static const String assetsSvgsPageViewItemImage2 = "assets/svgs/page_view_item_image2.svg";
+
   /// Assets for assetsSvgsPlant
   /// assets/svgs/plant.svg
   static const String assetsSvgsPlant = "assets/svgs/plant.svg";
