@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_hub_app/constants.dart';
+import 'package:fruit_hub_app/core/routing/routes.dart';
+import 'package:fruit_hub_app/core/services/shared_preferences_singleton.dart';
+import 'package:fruit_hub_app/core/theming/style.dart';
 import 'package:fruit_hub_app/core/utils/assets.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -8,11 +12,13 @@ class PageViewItem extends StatelessWidget {
       required this.image,
       required this.backgroundImage,
       required this.subTitle,
-      required this.title});
+      required this.title,
+      required this.isVisiable});
 
   final String image, backgroundImage;
   final String subTitle;
   final Widget title;
+  final bool isVisiable;
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +41,24 @@ class PageViewItem extends StatelessWidget {
                 right: 0,
                 child: SvgPicture.asset(image),
               ),
-              const Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text('تخط'),
+              Visibility(
+                visible: isVisiable,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Prefs.setBool(kisOnBoardingSeen, true);
+                      Navigator.of(context)
+                          .pushReplacementNamed(Routes.loginView);
+                    },
+                    child: Text(
+                      'تخط',
+                      style: TextStyles.regular13.copyWith(
+                        color: const Color(0xFF949D9E),
+                      ),
+                    ),
+                  ),
+                ),
               )
             ],
           ),
@@ -53,6 +74,7 @@ class PageViewItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 37 + 8),
           child: Text(
             subTitle,
+            style: TextStyles.semiBold13,
             textAlign: TextAlign.center,
           ),
         ),

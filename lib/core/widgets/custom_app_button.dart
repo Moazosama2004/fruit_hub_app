@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub_app/core/theming/colors.dart';
+import 'package:fruit_hub_app/core/theming/style.dart';
 
 class CustomAppButton extends StatelessWidget {
   const CustomAppButton(
@@ -23,6 +24,7 @@ class CustomAppButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
+        style: TextStyles.bold16,
       ),
     );
   }
