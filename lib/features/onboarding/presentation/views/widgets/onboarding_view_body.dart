@@ -4,10 +4,8 @@ import 'package:fruit_hub_app/constants.dart';
 import 'package:fruit_hub_app/core/routing/routes.dart';
 import 'package:fruit_hub_app/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_hub_app/core/theming/colors.dart';
-import 'package:fruit_hub_app/core/utils/assets.dart';
 import 'package:fruit_hub_app/core/widgets/custom_app_button.dart';
 import 'package:fruit_hub_app/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
-import 'package:fruit_hub_app/features/onboarding/presentation/views/widgets/onboarding_page_view_item.dart';
 
 class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});

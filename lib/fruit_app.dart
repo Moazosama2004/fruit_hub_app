@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_hub_app/core/routing/app_router.dart';
 import 'package:fruit_hub_app/core/routing/routes.dart';
+import 'package:fruit_hub_app/core/theming/colors.dart';
 import 'package:fruit_hub_app/generated/l10n.dart';
 
 class FruitHubApp extends StatelessWidget {
@@ -12,8 +13,9 @@ class FruitHubApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        fontFamily: 'Cairo'
-      ),
+          fontFamily: 'Cairo',
+          scaffoldBackgroundColor: Colors.white,
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor)),
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
