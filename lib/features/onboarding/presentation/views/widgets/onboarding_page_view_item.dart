@@ -4,7 +4,6 @@ import 'package:fruit_hub_app/constants.dart';
 import 'package:fruit_hub_app/core/routing/routes.dart';
 import 'package:fruit_hub_app/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_hub_app/core/theming/style.dart';
-import 'package:fruit_hub_app/core/utils/assets.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
