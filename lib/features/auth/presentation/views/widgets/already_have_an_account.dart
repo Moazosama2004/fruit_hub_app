@@ -1,34 +1,31 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:fruit_hub_app/core/routing/routes.dart';
 import 'package:fruit_hub_app/core/theming/style.dart';
 
-class DontHaveAnAccount extends StatelessWidget {
-  const DontHaveAnAccount({
+class AlreadyHaveAnAccount extends StatelessWidget {
+  const AlreadyHaveAnAccount({
     super.key,
-    required this.onPressed,
   });
 
-  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return Text.rich(
       TextSpan(
         children: [
           TextSpan(
-            text: ' لا تمتلك حساب؟',
+            text: 'تمتلك حساب بالفعل؟',
             style: TextStyles.semiBold16.copyWith(
               color: const Color(0xFF949D9E),
             ),
           ),
           TextSpan(
-              text: ' قم بأنشاء حساب',
+              text: ' تسجيل دخول',
               style: TextStyles.semiBold16.copyWith(
                 color: const Color(0xFF1B5E37),
               ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  Navigator.of(context).pushNamed(Routes.signupView);
+                  Navigator.pop(context);
                 }),
         ],
       ),
