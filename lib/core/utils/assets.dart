@@ -61,5 +61,9 @@ class Assets {
   /// Assets for assetsSvgsSplashLogoIcon
   /// assets/svgs/splash_logo_icon.svg
   static const String assetsSvgsSplashLogoIcon = "assets/svgs/splash_logo_icon.svg";
+
+  /// Assets for assetsSvgsVector
+  /// assets/svgs/Vector.svg
+  static const String assetsSvgsVector = "assets/svgs/Vector.svg";
 }
 
